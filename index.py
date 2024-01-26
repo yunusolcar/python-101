@@ -35,4 +35,32 @@ print(x + " sd4")
 # "ATATURK"
 # type("1")    => str
 
+z = "Bugün Kadıköy'den Mecidiyeköy'e 40 dakikada gittim."
+print(z)
 
+# String Concatenation
+# "5" + "4"    =>   "54"
+
+# Succesive Concatenation
+# 4 * "hello"  => "hellohellohellohello"
+# x = "1" + "0" * 5 => "100000"    => type(x) => str
+
+# Length
+# len("turkiye!")    =>   8
+
+# Indexing (Alt elemanlara erişme)
+# name = "Dante"
+# name[1] => "a"
+# "hello"[1]   =>   "e"
+# employee = "Beatrice"
+# employee[-1]     => last element  => "e"
+
+# Slicing
+# [start:end]
+# model = "Tesla"
+# model[1:3]   =>   "es"
+# model[:3]    =>   "Tes"
+# model[1:]    =>   "esla"
+# model[10:0:-1]     => "alse" (don't take index 0)
+# model[10::-1]     &&   model[::-1]    =>   "alseT"  (take all and reverse)
+# model
