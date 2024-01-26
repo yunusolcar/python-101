@@ -64,3 +64,22 @@ print(z)
 # model[10:0:-1]     => "alse" (don't take index 0)
 # model[10::-1]     &&   model[::-1]    =>   "alseT"  (take all and reverse)
 # model
+
+# Casting in Strings
+# a = "5"
+# int(a)  =>   5    =>   type: integer
+
+# Input
+# x = input("enter a number pls: ")
+# gelen input'a 10 yazarsak x = "10" oluyor. !!! Inputtan gelen veri -String- olarak gelir.
+# print(type(x))    =>   str
+# w/casting =>   int(x) + 10  =>   20   => integer
+# y = int(input("enter a number pls: "))     => direct casting
+
+# Comments
+# we can use: # or """
+"""
+z = 1
+print(z)
+"""
+
