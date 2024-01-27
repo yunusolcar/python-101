@@ -18,7 +18,7 @@ print(x + " sd4")
 
 
 # type
-# type(2.3) yazarak hangi type  da olduğunu öğrenebiliriz
+type(2.3)  # yazarak hangi type  da olduğunu öğrenebiliriz
 
 # type casting
 # float olan sayıyı integere çevirme
@@ -26,55 +26,55 @@ print(x + " sd4")
 
 
 # Variable Assingment
-# a = 2
-# x = a + 5    => x = 7
-# a = a + 3    => a = 5
+a = 2
+x = a + 5  # x = 7
+a = a + 3  # a = 5
 
 # Non-Scaler
 # String
 # "ATATURK"
-# type("1")    => str
+type("1")  # str
 
 z = "Bugün Kadıköy'den Mecidiyeköy'e 40 dakikada gittim."
 print(z)
 
 # String Concatenation
-# "5" + "4"    =>   "54"
+"5" + "4"  #  "54"
 
 # Succesive Concatenation
-# 4 * "hello"  => "hellohellohellohello"
-# x = "1" + "0" * 5 => "100000"    => type(x) => str
+4 * "hello"  # "hellohellohellohello"
+x = "1" + "0" * 5  # "100000"    => type(x) => str
 
 # Length
-# len("turkiye!")    =>   8
+len("turkiye!")  #   8
 
 # Indexing (Alt elemanlara erişme)
-# name = "Dante"
-# name[1] => "a"
-# "hello"[1]   =>   "e"
-# employee = "Beatrice"
-# employee[-1]     => last index  => "e"
+name = "Dante"
+name[1]  # "a"
+"hello"[1]  #   "e"
+employee = "Beatrice"
+employee[-1]  # last index  => "e"
 
 # Slicing
 # [start:end]
-# model = "Tesla"
-# model[1:3]   =>   "es"
-# model[:3]    =>   "Tes"
-# model[1:]    =>   "esla"
-# model[10:0:-1]     => "alse" (don't take index 0)
-# model[10::-1]     &&   model[::-1]    =>   "alseT"  (take all and reverse)
-# model
+model = "Tesla"
+model[1:3]  #   "es"
+model[:3]  #  "Tes"
+model[1:]  #  "esla"
+model[10:0:-1]  # "alse" (don't take index 0)
+model[10::-1]  # &&
+model[::-1]  #  "alseT"  (take all and reverse)
 
 # Casting in Strings
-# a = "5"
-# int(a)  =>   5    =>   type: integer
+a = "5"
+int(a)  # =>   5    =>   type: integer
 
 # Input
-# x = input("enter a number pls: ")
+x = input("enter a number pls: ")
 # gelen input'a 10 yazarsak x = "10" oluyor. !!! Inputtan gelen veri -String- olarak gelir.
-# print(type(x))    =>   str
+print(type(x))  #   str
 # w/casting =>   int(x) + 10  =>   20   => integer
-# y = int(input("enter a number pls: "))     => direct casting
+y = int(input("enter a number pls: "))  # direct casting
 
 # Comments
 # we can use: # or """
@@ -127,14 +127,13 @@ print(z)
 # (5 < 3) or print("hi") => hi
 
 # If - Else - Elif
-"""
 x = int(input("enter a number pls: "))
 
 if x % 2 == 0:
     print("num is even")
 else:
     print("num is odd")
-"""
+
 
 y = int(input("enter a number pls: "))
 
@@ -148,15 +147,16 @@ else:
 
 print("end")
 
+
 # Ternary Conditionals
-"""
 result = input("y/n?")
-if result == "y": # yes or no
-     b = 1
+if result == "y":  # yes or no
+    b = 1
 else:
-     b = 0
-     print(b)
- """
+    b = 0
+    print(b)
+
+
 # Let's try w ternary condinionals
 result = input("y/n?")
 b = 1 if result == "y" else 0
@@ -164,14 +164,13 @@ print(b)
 
 # Loops
 # while
-"""
 r = int(input("enter a positive number pls: "))
 
 while r < 0:
     print("this number is negative. Try again!")
     r = int(input("enter a positive number pls: "))
 print("number positive")
-"""
+
 e = 0
 total = 0
 
@@ -183,21 +182,24 @@ print(total)  # 5050
 
 # for loop
 # for <variable> in <object>
-# for c in "hey"    => "h", "e", "y"
+for c in "hey":
+    print(c)  # "h", "e", "y"
 
 for num in range(15):  # 0 to 14
     print("num: ", num)
-"""
+
+
 total = 0
-for x in range(101): 
+for x in range(101):
     total += x
-print(total)    => (0+1+2+3+4...+100) = 5050
-"""
+print(total)  # (0+1+2+3+4...+100) = 5050
+
 
 t = 1
 for _ in range(5):
     t *= 5  # t = t*5
     print(t)  # 5,25,125,625,3125
+
 
 word = "hello there"
 n = len(word)
@@ -208,12 +210,12 @@ while index < n:
     index += 1
 
 # break
-"""    
 for i in range(10):
     if i == 4:
         break
-    print(i)    => 0,1,2,3
-"""
+    print(i)  # 0,1,2,3
+
+
 p = 0
 while p < 10:
     p += 1
@@ -225,4 +227,4 @@ while p < 10:
 for i in range(10):
     if i == 5:
         continue
-print(i)    # 1,2,3,4,6,7,8,9
+print(i)  # 1,2,3,4,6,7,8,9
