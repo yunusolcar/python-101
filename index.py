@@ -53,7 +53,7 @@ print(z)
 # name[1] => "a"
 # "hello"[1]   =>   "e"
 # employee = "Beatrice"
-# employee[-1]     => last element  => "e"
+# employee[-1]     => last index  => "e"
 
 # Slicing
 # [start:end]
@@ -161,3 +161,68 @@ else:
 result = input("y/n?")
 b = 1 if result == "y" else 0
 print(b)
+
+# Loops
+# while
+"""
+r = int(input("enter a positive number pls: "))
+
+while r < 0:
+    print("this number is negative. Try again!")
+    r = int(input("enter a positive number pls: "))
+print("number positive")
+"""
+e = 0
+total = 0
+
+while e <= 100:
+    total += e
+    e += 1
+print(total)  # 5050
+
+
+# for loop
+# for <variable> in <object>
+# for c in "hey"    => "h", "e", "y"
+
+for num in range(15):  # 0 to 14
+    print("num: ", num)
+"""
+total = 0
+for x in range(101): 
+    total += x
+print(total)    => (0+1+2+3+4...+100) = 5050
+"""
+
+t = 1
+for _ in range(5):
+    t *= 5  # t = t*5
+    print(t)  # 5,25,125,625,3125
+
+word = "hello there"
+n = len(word)
+index = 0
+
+while index < n:
+    print(word[index])
+    index += 1
+
+# break
+"""    
+for i in range(10):
+    if i == 4:
+        break
+    print(i)    => 0,1,2,3
+"""
+p = 0
+while p < 10:
+    p += 1
+    if p == 5:
+        break
+    print(p)
+
+# continue
+for i in range(10):
+    if i == 5:
+        continue
+print(i)    # 1,2,3,4,6,7,8,9
