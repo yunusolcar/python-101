@@ -83,3 +83,38 @@ z = 1
 print(z)
 """
 
+# Comparison in Numerical Data and Operators
+# i = j   =>   (=) Assignment
+# i == j  =>  (==) Equality test
+# i != j  =>  (!=) Inequality test (If it is not equal, "True" is returned.)
+# i > j
+# i < j
+# i >= j
+# i <= j
+
+# Comparison in Strings
+# "Orange" == "orange"   =>   false
+# "Orange" != "orange"    =>   true
+# "Orange" == "Orange"   =>   true
+# "a" < "b"    => true
+# "ahaha" < "byby"  =>   true ("b" > "a")
+# "ab" < "ac"  => true ("c" > "b")
+
+# Logical Operators
+# not
+# not true     =>   false
+# not 5 > 3    =>   false
+# not 5 == 5  =>   false
+# not 1 > 20  =>   true
+
+# and
+# true and true     =>   true
+# true and false    =>   false
+# (5 > 1) and (20 < 40)  => true
+# (3 > 2) and (11 < 7)  => false
+
+# or
+# true or false     =>   true
+# false or false    =>   false
+# (3 > 2) or (11 < 7)  => true
+# (3 > 5) and (11 < 7)  => false
