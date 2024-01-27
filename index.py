@@ -118,3 +118,46 @@ print(z)
 # false or false    =>   false
 # (3 > 2) or (11 < 7)  => true
 # (3 > 5) and (11 < 7)  => false
+
+# Short circuit
+# A and B => In the and operator, if A is false, result is automatically false
+# A or B    => In the or operator, if A is true, result is automatically true
+# (5 < 3) and print("hello")  => false
+# (5 > 3) or print("hi") => True
+# (5 < 3) or print("hi") => hi
+
+# If - Else - Elif
+"""
+x = int(input("enter a number pls: "))
+
+if x % 2 == 0:
+    print("num is even")
+else:
+    print("num is odd")
+"""
+
+y = int(input("enter a number pls: "))
+
+if y % 3 == 0:
+    if y % 2 == 0:
+        print("this number is divisible by both 2 and 3")
+    else:
+        print("this number is only divisible by 3.")
+else:
+    print("this number is only divisible by 2.")
+
+print("end")
+
+# Ternary Conditionals
+"""
+result = input("y/n?")
+if result == "y": # yes or no
+     b = 1
+else:
+     b = 0
+     print(b)
+ """
+# Let's try w ternary condinionals
+result = input("y/n?")
+b = 1 if result == "y" else 0
+print(b)
