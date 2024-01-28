@@ -283,6 +283,57 @@ print(watches.count("Casio"))  # 2
 # a = [1, 2, 3]
 # a.reverse()   [3, 2, 1]
 
+# in
+# The in keyword is used to check if a value is present in a sequence (list, range, string etc.).
+# The in keyword is also used to iterate through a sequence in a for loop
+list = [1, 2, 3, 4]
+3 in list  # true
+15 in list  # false
+
+
 # sorting
 # a = ["b", "a", "c", 1, 2.5, 3]
 # a.sort()  [1, 2.5, 3, "a", "b", "c"]
+
+# Tuple
+# Tuples are used to store multiple items in a single variable.
+# !!! A tuple is a collection which is ordered and unchangeable.
+# tuples usage  => (element1, element2, ...)    or  element1, element2, ...
+k = 10
+y = 20
+location = (10, 20)
+location[0] = 100  # !!! can't change
+
+# Dictionaries
+# Dictionaries are used to store data values in key:value pairs. {}
+# usage: {key : value, key2: value2, key3: value3, ...}
+score = {"John": 700, "Jane": 860, "Jim": 950}
+score["Jane"]  # 860
+
+players = {
+    "Alp": {"id": 5, "age": 21},
+    "Akın": {"id": 7, "age": 23},
+    "Orhun": {"id": 8, "age": 19},
+    "Selin": {"id": 11, "age": 20},
+}
+
+players["Akın"]  # "id": 7, "age": 23
+players["Selin"]["id"]  # 11
+players[0]  # ERROR
+players["Orhun"]["age"]  # 19
+players["Alp"] = players["Alp"] + 5  # 21 + 5 = 26
+# Add Element to Disctionary
+
+players["Sema"] = {"id": 10, "age": 19}  # add "Sema"
+print(
+    players
+)  #  {'Alp': {'id': 5, 'age': 21}, 'Akın': {'id': 7, 'age': 23}, 'Orhun': {'id': 8, 'age': 19}, 'Selin': {'id': 11, 'age': 20}, 'Sema': {'id': 10, 'age': 19}}
+
+# del user
+del players[  # delete "Orhun"
+    "Orhun"
+]  # {'Alp': {'id': 5, 'age': 21}, 'Akın': {'id': 7, 'age': 23}, 'Selin': {'id': 11, 'age': 20}, 'Sema': {'id': 10, 'age': 19}}
+
+# search user
+"Ayşe" in players # false
+"Sema" in players # true
