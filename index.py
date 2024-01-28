@@ -228,3 +228,61 @@ for i in range(10):
     if i == 5:
         continue
 print(i)  # 1,2,3,4,6,7,8,9
+
+
+# List
+price = [10, 52, 78, 32, 69]
+price[0]  # 10
+price[-1]  # 69
+price[1:4]  # 25, 78, 32
+
+# lists are mutable data type
+price[1] += 5  # 57
+price[0:3] = 20, 30, 40  # price = [20, 30, 40, 32, 69]
+
+# len
+len(price)  # 5
+
+# append()
+# adds to the end of the list (single)
+brand = ["Ferrari", "Koenigsegg"]
+brand.append("Mclaren")  # ["Ferrari", "Koenigsegg", "Mclaren" ]
+
+# extend()
+# adds to the end of the list (multiple)
+animals = ["dog", "cat"]
+animals.extend(["monkey", "elephant"])  # ["dog", "cat", "monkey", "elephant"]
+
+# insert()
+# attach to a specific place
+numbers = [1, 2, 3, 4, 5]
+numbers.insert(0, 100)  # [100, 1, 2, 3, 4 ,5] added 100 to index zero
+numbers.insert(3, 99)  # [100, 1, 2, 99, 3, 4, 5]
+
+# remove()
+# removes the first element
+aircrafts = ["Airbus", "Boeing", "Bombarder"]
+aircrafts.remove("Boeing")  # ["Airbus", "Bombarder"]
+
+# pop()
+# Removes the element at the specified position
+
+# count()
+# Returns the number of elements with the specified value
+watches = ["Casio", "Rolex", "Casio", "Panamera", "Richard Mille"]
+print(watches.count("Casio"))  # 2
+
+# copy()
+# Returns a copy of the list
+
+# find the index of an element
+# watches.index("Panamera") # 3
+
+# reverse
+# reversing the list
+# a = [1, 2, 3]
+# a.reverse()   [3, 2, 1]
+
+# sorting
+# a = ["b", "a", "c", 1, 2.5, 3]
+# a.sort()  [1, 2.5, 3, "a", "b", "c"]
