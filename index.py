@@ -406,4 +406,18 @@ for i in myList:
     print(i)
     if i == text:
         print("Found!")
-        break
+        break  # 38 Found!
+
+# split()
+# string to list
+# We write what we want to split according to split()
+text = "Hello World i love python"
+t.split(" ")  # space char =>    ["Hello", "World", "i", "love"," python"]
+
+myText = "my name is yunus, what's yours?"
+print(myText.split("u"))  # ['my name is y', 'n', "s, what's yo", 'rs?']
+
+# join
+# list to string
+fruits = ["banana", "apple", "grape"]
+print("/".join(fruits))  # banana/apple/grape
