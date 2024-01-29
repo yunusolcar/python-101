@@ -298,7 +298,7 @@ list = [1, 2, 3, 4]
 # Tuple
 # Tuples are used to store multiple items in a single variable.
 # !!! A tuple is a collection which is ordered and unchangeable.
-# tuples usage  => (element1, element2, ...)    or  element1, element2, ...
+# tuples usage  => t = (element1, element2, ...)    or  element1, element2, ...
 k = 10
 y = 20
 location = (10, 20)
@@ -322,8 +322,8 @@ players["Selin"]["id"]  # 11
 players[0]  # ERROR
 players["Orhun"]["age"]  # 19
 players["Alp"] = players["Alp"] + 5  # 21 + 5 = 26
-# Add Element to Disctionary
 
+# Add Element to Disctionary
 players["Sema"] = {"id": 10, "age": 19}  # add "Sema"
 print(
     players
@@ -335,5 +335,75 @@ del players[  # delete "Orhun"
 ]  # {'Alp': {'id': 5, 'age': 21}, 'Akın': {'id': 7, 'age': 23}, 'Selin': {'id': 11, 'age': 20}, 'Sema': {'id': 10, 'age': 19}}
 
 # search user
-"Ayşe" in players # false
-"Sema" in players # true
+"Ayşe" in players  # false
+"Sema" in players  # true
+
+# Sets
+# Sets are used to store multiple items in a single variable.
+# sets are not indexable, sets are mutable
+# Dictionaries : score = {"John": 700, "Jane": 860, "Jim": 950, "John": 700}
+# Sets : myset = {"apple", "banana", "cherry"}
+g = {}  # type(g) <dict> # empty dictionaries
+s = set()  # type(s) <set> # empty set
+
+message = "hello there"
+myString = set(message)
+print(myString)  # {'h', ' ', 'e', 'l', 'r', 'o', 't'}
+
+numbers = [1, 2, 3, 3, 4, 4, 4, 5, 5, 6, 7, 8]
+thisSet = set(numbers)
+print(type(thisSet))  # {1, 2, 3, 4, 5, 6, 7, 8}
+
+# tuple to set
+myTuple = (1, 2, 3, 4, 5, 5)  # tuple
+print(myTuple)  # (1, 2, 3, 4, 5, 5)
+mySet = set(myTuple)
+print(mySet)  # {1, 2, 3, 4, 5}
+
+# add/remove element to set
+s = {1, 2, 3}
+s.add(6)  # {1,2,3,6}
+s.remove(1)  # {2, 3, 6}
+# If we try to delete a non-existent element with remove we get an error, but if we use discard instead we don't get an error
+s.discard(11)  # {2, 3, 6}
+
+# Difference
+# differences between the two sets
+s1 = set([1, 3, 5])
+s2 = set([2, 3, 8])
+print(s1.difference(s2))  # {1, 5}
+s1 - s2  # {1, 5} same
+
+# intersection (kesişim)
+s1 = set([1, 3, 11, 5])
+s2 = set([2, 3, 11, 8])
+s1.intersection(s2)  # {3, 11}
+s1 & s2  # {3,11} same
+
+# Union
+s1 = set([1, 5, 10])
+s2 = set([2, 5, 11])
+s1.union(s2)  # {1, 2, 5, 10, 11}
+
+# Non-scalar for
+list = [60, 70, 85, 90]
+for i in range(len(list)):
+    list[i] += 5
+print(list)  # [65, 75, 90, 95]
+
+# For loop to add 5 points to each grade, excluding the student at index 1
+studentGrades = [55, 80, 65, 40]
+for i in range(len(studentGrades)):
+    if i != 1:
+        studentGrades[i] += 5
+    print(studentGrades)  # [60, 80, 70, 45]
+
+# search for an element in a list
+text = int(input("Which number do you want to search for? : "))
+myList = [12, 46, 92, 59, 27, 38, 21]
+
+for i in myList:
+    print(i)
+    if i == text:
+        print("Found!")
+        break
