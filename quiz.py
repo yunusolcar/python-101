@@ -1,23 +1,25 @@
 while True:
-    firstNumber = input("enter first number pls (q to exit) :  ")
+    first_number = input("enter first number pls (q to exit) :  ")
 
-    if firstNumber == "q":
+    if first_number == "q":
         break
 
-    secondNumber = input("enter second number pls (q to exit) : ")
-    if firstNumber == "q":
+    second_number = input("enter second number pls (q to exit) : ")
+    if second_number == "q":
         break
 
-    firstNumber = int(firstNumber)
-    secondNumber = int(secondNumber)
+    first_number = int(first_number)
+    second_number = int(second_number)
 
-    firstNumber *= firstNumber
-    print("first number's square:", firstNumber)
+    first_number *= first_number
+    print("first number's square:", first_number)
 
-    if firstNumber % secondNumber == 0:
-        print(f"{firstNumber} is completely divisible by {secondNumber}")
-        print("result: ", firstNumber / secondNumber)
+    if first_number % second_number == 0:
+        print(f"{first_number} is completely divisible by {second_number}")
+        print("result: ", first_number / second_number)
         break
     else:
-        print(f"{firstNumber} is not completely divisible by {secondNumber}")
+        print(f"{first_number} is not completely divisible by {second_number}")
         break
+        
+        
