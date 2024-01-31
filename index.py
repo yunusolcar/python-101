@@ -179,6 +179,10 @@ while e <= 100:
     e += 1
 print(total)  # 5050
 
+# infinite loop
+# while True:
+# print("HAHAHA!!!")
+
 
 # for loop
 # for <variable> in <object>
@@ -188,6 +192,8 @@ for c in "hey":
 for num in range(15):  # 0 to 14
     print("num: ", num)
 
+# range(10) = range(0,10)
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 total = 0
 for x in range(101):
@@ -430,9 +436,11 @@ print(squares)
 # let's make w / list comprehension
 squares = [i * i for i in range(1, 11)]  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 
+
 # We can also use functions
 def cube(x):
     return x * x * x
+
 
 cubes = [cube(x) for x in range(1, 11)]
 print(cubes)  # [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
@@ -440,4 +448,4 @@ print(cubes)  # [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
 # example: weird squares
 squares = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 weird_squares = [e if e % 2 == 0 else -1 for e in squares]
-print(weird_squares) # [-1, 4, -1, 16, -1, 36, -1, 64, -1, 100]
+print(weird_squares)  # [-1, 4, -1, 16, -1, 36, -1, 64, -1, 100]
