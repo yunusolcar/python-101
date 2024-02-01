@@ -1,3 +1,4 @@
+"""
 def square(num):
     return num**2
 
@@ -18,3 +19,32 @@ while True:
         print(f"{num1_square} is exactly divisible by {num2}")
     else:
         print(f"{num1_square} is not exactly divisible by {num2}")
+
+# Quiz 2
+square = []
+param1 = int(input("enter a range: "))
+
+
+def func():
+    for i in range(1, param1 + 1):
+        square.append(i * i)
+
+
+func()
+total = sum(square)
+print("list: ", square)
+print("Result: ", total)
+"""
+# other way:
+param1 = int(input("enter a range: "))
+
+
+def square(param1):
+    total = 0
+    for i in range(1, param1 + 1):
+        total += i**2
+    return total
+
+
+result = square(param1)
+print(result)
