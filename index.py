@@ -423,10 +423,21 @@ t.split(" ")  # space char =>    ["Hello", "World", "i", "love"," python"]
 myText = "my name is yunus, what's yours?"
 print(myText.split("u"))  # ['my name is y', 'n', "s, what's yo", 'rs?']
 
+# enumerate
+""" 
+words = ["a", "b", "c", "d"]
+for i in enumerate(words):
+    print(i) # (index, element) and result tuple
+(0, 'a')
+(1, 'b')
+(2, 'c')
+(3, 'd')
+"""
 # join
 # list to string
 fruits = ["banana", "apple", "grape"]
 print("/".join(fruits))  # banana/apple/grape
+"-".join(["Hello", "World"])    # "Hello-World"
 
 # List Comprehension
 squares = []
@@ -449,3 +460,9 @@ print(cubes)  # [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
 squares = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 weird_squares = [e if e % 2 == 0 else -1 for e in squares]
 print(weird_squares)  # [-1, 4, -1, 16, -1, 36, -1, 64, -1, 100]
+
+
+# Functions
+def say_hi():
+    print("hi")
+say_hi()

@@ -1,25 +1,20 @@
+def square(num):
+    return num**2
+
+
 while True:
-    first_number = input("enter first number pls (q to exit) :  ")
+    num1, num2 = input("Enter Num1, Num2: ").split()
 
-    if first_number == "q":
+    if num1 == "q" or num1 == "Q" or num2 == "q" or num2 == "Q":
+        print("exit")
         break
 
-    second_number = input("enter second number pls (q to exit) : ")
-    if second_number == "q":
-        break
+    num1 = int(num1)
+    num2 = int(num2)
 
-    first_number = int(first_number)
-    second_number = int(second_number)
+    num1_square = square(num1)
 
-    first_number *= first_number
-    print("first number's square:", first_number)
-
-    if first_number % second_number == 0:
-        print(f"{first_number} is completely divisible by {second_number}")
-        print("result: ", first_number / second_number)
-        break
+    if num1_square % num2 == 0:
+        print(f"{num1_square} is exactly divisible by {num2}")
     else:
-        print(f"{first_number} is not completely divisible by {second_number}")
-        break
-        
-        
+        print(f"{num1_square} is not exactly divisible by {num2}")
