@@ -57,15 +57,15 @@ print(fullname("John", "Doe"))  # "John-Doe"
 def fullname2(*argument):
     return "-".join(argument)
 
-
 print(fullname2("Mustafa", "Kemal", "Atatürk"))
+
 
 element = []  # Boş bir liste oluştur
 total = 1  # 'total' adlı değişkeni sıfıra başlat
 
 for i in range(1, (9 + 1)):
     total = i**2  # 'total' değişkenin karesini alır
-    # total += 1  # total değişkenini 1 arttırı
+    # total += 1  # total değişkenini 1 arttırır
     # total *= 5 # total değişkenini 5 ile çarpar
     element.append(total)  # 'total' değerini 'element' listesine ekle
 print(element)
@@ -158,3 +158,15 @@ vowels, count = func(fullname)
 
 print("Vowel letters: ", vowels)
 print("Total vowels: ", count)
+
+
+# Fibonacci Numbers
+a = 0
+b = 1
+c = 0
+
+while c < 1000:
+    print(b)
+    c = a + b
+    a = b
+    b = c
