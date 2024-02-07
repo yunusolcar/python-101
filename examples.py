@@ -1,4 +1,5 @@
 # 1 to 100
+"""
 a = 0
 total = 0
 
@@ -56,6 +57,7 @@ print(fullname("John", "Doe"))  # "John-Doe"
 # example-2 other solution
 def fullname2(*argument):
     return "-".join(argument)
+
 
 print(fullname2("Mustafa", "Kemal", "Atatürk"))
 
@@ -170,3 +172,85 @@ while c < 1000:
     c = a + b
     a = b
     b = c
+
+# Guess the number
+import random
+
+
+def guess(i):
+    random_number = random.randint(1, i)
+    guess = 0
+    while guess != random_number:
+        guess = int(input(f"Guess a number between 1 and {i}: "))
+        if guess < random_number:
+            print("Sorry, guess again. Too low.")
+        elif guess > random_number:
+            print("Sorry, guess again. Too much")
+    print(f"Nice, you have guessed {random_number}")
+
+
+i = int(input("sayı aralığı gir: "))
+guess(i)
+
+# Rock, paper, scissors
+import random
+
+
+def play():
+    user = input("r for rock, p for paper, s for scissors. What's your choice?: ")
+    computer = random.choice(["r", "p", "s"])
+
+    if user == computer:
+        return print("Tie")
+
+    if is_win(user, computer):
+        return print("You won :) ")
+
+    return print("You lost, computer's choice: ", computer)
+
+
+# r > s, p > r, s > p
+def is_win(player, opponent):
+    if (
+        (player == "r" and opponent == "s")
+        or (player == "p" and opponent == "r")
+        or (player == "s" and opponent == "p")
+    ):
+        return True
+
+
+play()
+
+
+import time
+
+
+def countdown(t):
+    while t:
+        mins, secs = divmod(t, 60)
+        timer = "{:02d}:{:02d}".format(mins, secs)
+        print(timer, end="\r")
+        time.sleep(1)
+        t -= 1
+    
+    print("Timer completed")
+
+t = int(input("Enter the time in second: "))
+
+countdown(t)
+ """
+
+# Password Generator
+import random
+
+print("Password Generator")
+
+chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$€%^&*().,?"  # $%&\'()*+,-./:;<=>?@[\\]^_`{|}~ \t\n\r\x0b\x0c"
+
+password_length = int(input("input your password length: "))
+print("\n Here is your Password")
+
+passwords = ""
+for i in range(password_length):
+    passwords += random.choice(chars)
+print("\n", passwords)

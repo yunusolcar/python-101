@@ -282,12 +282,25 @@ print(watches.count("Casio"))  # 2
 # Returns a copy of the list
 
 # find the index of an element
-# watches.index("Panamera") # 3
+watches = ["Casio", "Rolex", "Casio", "Panamera", "Richard Mille"]
+watches.index("Panamera")  # 3
 
-# reverse
+# reverse()
 # reversing the list
-# a = [1, 2, 3]
-# a.reverse()   [3, 2, 1]
+a = [1, 2, 3]
+a.reverse()[3, 2, 1]
+
+# upper()
+a = "hello there"
+a.upper()  # "HELLO THERE"
+
+# lower()
+a = "GENERAL KENOBI"
+a.lower()  # "general kenobi"
+
+# replace(new, old)
+a = "Cat"
+a.replace("c,k")  # kat
 
 # in
 # The in keyword is used to check if a value is present in a sequence (list, range, string etc.).
@@ -437,7 +450,7 @@ for i in enumerate(words):
 # list to string
 fruits = ["banana", "apple", "grape"]
 print("/".join(fruits))  # banana/apple/grape
-"-".join(["Hello", "World"])    # "Hello-World"
+"-".join(["Hello", "World"])  # "Hello-World"
 
 # List Comprehension
 squares = []
@@ -465,4 +478,6 @@ print(weird_squares)  # [-1, 4, -1, 16, -1, 36, -1, 64, -1, 100]
 # Functions
 def say_hi():
     print("hi")
+
+
 say_hi()
