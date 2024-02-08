@@ -173,9 +173,20 @@ while c < 1000:
     a = b
     b = c
 
+
+# Prime Numbers
+n = int(input("enter a number: "))
+
+for i in range(2, n):
+    if n % i == 0:
+        print(f"{n} is not prime number")
+        break
+else:
+    print(f"{n} is prime number")
+
+
 # Guess the number
 import random
-
 
 def guess(i):
     random_number = random.randint(1, i)
@@ -192,9 +203,9 @@ def guess(i):
 i = int(input("sayı aralığı gir: "))
 guess(i)
 
+
 # Rock, paper, scissors
 import random
-
 
 def play():
     user = input("r for rock, p for paper, s for scissors. What's your choice?: ")
@@ -218,12 +229,11 @@ def is_win(player, opponent):
     ):
         return True
 
-
 play()
 
 
+# Countdown
 import time
-
 
 def countdown(t):
     while t:
@@ -236,16 +246,15 @@ def countdown(t):
     print("Timer completed")
 
 t = int(input("Enter the time in second: "))
-
 countdown(t)
- """
+
 
 # Password Generator
 import random
 
 print("Password Generator")
 
-chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$€%^&*().,?"  # $%&\'()*+,-./:;<=>?@[\\]^_`{|}~ \t\n\r\x0b\x0c"
+chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$€%^&*().,?"
 
 password_length = int(input("input your password length: "))
 print("\n Here is your Password")
@@ -254,3 +263,13 @@ passwords = ""
 for i in range(password_length):
     passwords += random.choice(chars)
 print("\n", passwords)
+
+
+# QR code in Python
+import qrcode
+
+link = "https://www.youtube.com/watch?v=atGCQWspKTE&pp=ygUPbmFoIMOnZWtlbiBhZGFt"
+
+img = qrcode.make(link)
+img.save("C:/Users/***/***/***/qr/myQr.png")
+"""
