@@ -1,6 +1,6 @@
 x = "selam"
 print(x + " sd4")
-
+"""
 # Data Objects:
 # 1- Scalar
 # 2 - Non-scalar
@@ -81,7 +81,6 @@ y = int(input("enter a number pls: "))  # direct casting
 """
 z = 1
 print(z)
-"""
 
 # Comparison in Numerical Data and Operators
 # i = j   =>   (=) Assignment
@@ -437,7 +436,6 @@ myText = "my name is yunus, what's yours?"
 print(myText.split("u"))  # ['my name is y', 'n', "s, what's yo", 'rs?']
 
 # enumerate
-""" 
 words = ["a", "b", "c", "d"]
 for i in enumerate(words):
     print(i) # (index, element) and result tuple
@@ -445,7 +443,7 @@ for i in enumerate(words):
 (1, 'b')
 (2, 'c')
 (3, 'd')
-"""
+
 # join
 # list to string
 fruits = ["banana", "apple", "grape"]
@@ -479,5 +477,29 @@ print(weird_squares)  # [-1, 4, -1, 16, -1, 36, -1, 64, -1, 100]
 def say_hi():
     print("hi")
 
-
 say_hi()
+"""
+
+
+# Class Structure and OOP
+class Flights:
+    airlines = "THY"
+
+    def __init__(self, flight_number, departure, arrival, air_time, aircraft):
+        self.flight_number = flight_number
+        self.departure = departure
+        self.arrival = arrival
+        self.air_time = air_time
+        self.aircraft = aircraft
+
+    def announcement(self):
+        return "Flight {} {} - {} will take {} minutes. ".format(
+            self.flight_number, self.departure, self.arrival, self.air_time
+        )
+
+
+flight1 = Flights("TK2642", "LTFJ", "LTCA", 75, "B738")
+flight2 = Flights("TK7055", "LTAT", "LTAC", 75, "A320")
+print(flight1.aircraft)  # B738
+print(flight1.airlines)  # THY
+print(flight2.announcement())  # Flight TK7055 LTAT - LTAC will take 75 minutes.
