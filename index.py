@@ -485,21 +485,93 @@ say_hi()
 class Flights:
     airlines = "THY"
 
-    def __init__(self, flight_number, departure, arrival, air_time, aircraft):
+    def __init__(
+        self, flight_number, departure, arrival, air_time, aircraft, passenger, capacity
+    ):
         self.flight_number = flight_number
         self.departure = departure
         self.arrival = arrival
         self.air_time = air_time
         self.aircraft = aircraft
+        self.passenger = passenger
+        self.capacity = capacity
 
     def announcement(self):
         return "Flight {} {} - {} will take {} minutes. ".format(
             self.flight_number, self.departure, self.arrival, self.air_time
         )
 
+    def empty_seats(self):
+        return self.capacity - self.passenger
 
-flight1 = Flights("TK2642", "LTFJ", "LTCA", 75, "B738")
-flight2 = Flights("TK7055", "LTAT", "LTAC", 75, "A320")
+    def ticket_sale(self, ticket_quantity=1):  # ticket quantity is 1 by default
+        if (self.passenger + ticket_quantity) <= self.capacity:
+            self.passenger += ticket_quantity
+            print(
+                "{} ticket sold. Number of tickets remaining : {}".format(
+                    ticket_quantity, self.empty_seats()
+                )
+            )
+        else:
+            print("Error")
+        return
+
+
+flight1 = Flights("TK2642", "LTFJ", "LTCA", 75, "B738", 100, 189)
+flight2 = Flights("TK7055", "LTAT", "LTAC", 75, "A320", 180, 180)
 print(flight1.aircraft)  # B738
 print(flight1.airlines)  # THY
 print(flight2.announcement())  # Flight TK7055 LTAT - LTAC will take 75 minutes.
+print(flight1.empty_seats())  # 189 - 100 = 89
+flight1.ticket_sale(9)  # 9 ticket sold. Number of tickets remaining : 80
+
+# args
+# The special syntax *args in function definitions in Python is used to pass a variable
+# number of arguments to a function. It is used to pass a non-keyworded, variable-length argument list.
+
+
+def myFun(*argv):
+    for arg in argv:
+        print(arg)
+
+
+myFun("Hello", "Welcome", "to", "Turkiye")
+
+
+# Python program to illustrate *args with a first extra argument
+# like a tuple
+def myFun(arg1, *argv):
+    print("First argument :", arg1)
+    for arg in argv:
+        print("Next argument through *argv :", arg)
+
+
+myFun("Hello", "Welcome", "to", "GeeksforGeeks")
+
+
+# **kwargs
+# like a dictionary
+# Python program to illustrate *kwargs for a variable number of keyword arguments.
+# Here **kwargs accept keyworded variable-length argument passed by the function call.
+# for first=’Geeks’ first is key and ‘Geeks’ is a value. in simple words, what we assign is value, and to whom we assign is key.
+
+
+def myFun(**kwargs):
+    for key, value in kwargs.items():
+        print("%s == %s" % (key, value))
+        print(type(kwargs))  # dict
+
+
+myFun(first="Geeks", mid="for", last="Geeks")
+
+
+# Closure
+def take_msg(msg):
+    
+    def print_msg():
+        print(msg)
+    
+    return print_msg
+
+closure = take_msg("Hello Message")
+closure()
