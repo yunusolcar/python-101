@@ -567,11 +567,46 @@ myFun(first="Geeks", mid="for", last="Geeks")
 
 # Closure
 def take_msg(msg):
-    
+
     def print_msg():
         print(msg)
-    
+
     return print_msg
+
 
 closure = take_msg("Hello Message")
 closure()
+
+
+# Decorator
+# usage
+def name():
+    return "John!"
+
+
+def decorator(my_func):
+
+    def wrapper():
+        return "Hey, {}".format(my_func())
+
+    return wrapper
+
+
+say_hello = decorator(name)
+print(say_hello())
+
+# or
+
+def decorator(my_func):
+    def wrapper():
+        return "Hey, {}".format(my_func())
+
+    return wrapper
+
+
+@decorator
+def name():
+    return "John!"
+
+
+print(name())  # "<p>Merhaba!</p>"
